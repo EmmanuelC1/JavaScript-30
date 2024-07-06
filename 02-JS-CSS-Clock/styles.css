@@ -4,42 +4,42 @@ html {
   padding: 0;
 }
 
-.container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-  background-color: lightgray;
-}
-
 .clock {
-  width: 30rem;
-  height: 30rem;
-  border: 20px solid white;
-  border-radius: 50%;
+  background-color: #020617;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.clock-face {
-  position: relative;
-  background-color: aqua;
+.clock--face {
+  border: 3px solid #f8fafc;
   border-radius: 50%;
-  height: 100%;
-  width: 100%;
+  height: 30rem;
+  width: 30rem;
 
-  /* transform: translateY(-3px); */
-  /* account for the height of the clock hands */
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  position: relative;
 }
 
 .hand {
+  background-color: #f1f5f9;
+  width: 8px;
+  height: 50%;
+  transform-origin: center bottom;
+
+  /* starting point */
+  transform: rotate(0deg);
   position: absolute;
-  background-color: black;
-  width: 50%;
-  height: 6px;
-  top: 50%;
 }
 
-.hour-hand {}
+.hand--min {
+  width: 5px;
+}
 
-.min-hand {}
-
-.second-hand {}
+.hand--seconds {
+  background-color: #b91c1c;
+  width: 3px;
+}
